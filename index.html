@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>    <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <h1>Projections of Canada</h1>
+
+    <p>This guide shows maps of various parts of Canada using different projections.</p>
+
+    <p>Choose a region and projection to see how things look. The "up" and "down" arrows on your keyboard can help you switch options quickly.</p>
+
+    <form id="parameters" method="get" action="#">
+      <div class="form-group region">
+        <label for="select-region-file">Region</label>
+        <select id="select-region-file" name="region-file">
+          <optgroup label="Canada">
+            <option value="/d/canada.json">Canada</option>
+          </optgroup>
+          <optgroup label="Provinces and Territories">
+            <option value="/d/pr/alberta.json">Alberta</option>
+            <option value="/d/pr/british-columbia.json">British Columbia</option>
+            <option value="/d/pr/manitoba.json">Manitoba</option>
+            <option value="/d/pr/new-brunswick.json">New Brunswick</option>
+            <option value="/d/pr/newfoundland-and-labrador.json">Newfoundland and Labrador</option>
+            <option value="/d/pr/northwest-territories.json">Northwest Territories</option>
+            <option value="/d/pr/nova-scotia.json">Nova Scotia</option>
+            <option value="/d/pr/nunavut.json">Nunavut</option>
+            <option value="/d/pr/ontario.json">Ontario</option>
+            <option value="/d/pr/prince-edward-island.json">Prince Edward Island</option>
+            <option value="/d/pr/quebec.json">Quebec</option>
+            <option value="/d/pr/saskatchewan.json">Saskatchewan</option>
+            <option value="/d/pr/yukon.json">Yukon</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group projection">
+        <label for="select-projection">Projection</label>
+        <select id="select-projection" name="projection">
+          <option value="equirectangular" data-description="This is the simplest projection possible: the X axis shows longitude and the Y axis shows latitude. Northern parts of the map appear far wider than they do tall." data-wikipedia-href="http://en.wikipedia.org/wiki/Equirectangular_projection">Equirectangular</option>
+          <option value="mercator" data-description="This is similar to equirectangular; but where Equirectangular makes the X axis appear wider than it should be, Mercator makes both the X and Y axes wider than they should be. It looks fine when zoomed in, but for larger areas the distortion is huge." data-wikipedia-href="http://en.wikipedia.org/wiki/Web_Mercator">Web Mercator</option>
+          <option value="orthographic" data-description="A completely different take: go into space and look straight at the area in question. It&apos;s similar to a picture taken with a fish-eye lens: the emphasis and focus is on the centre." data-wikipedia-href="http://en.wikipedia.org/wiki/Orthographic_projection_in_cartography">Orthographic</option>
+          <option value="lambert-conformal-conic" data-description="A conic projection is what you get if you place an ice cream cone over the Earth and then flatten it. Shapes are preserved, but sizes are skewed. This is the standard projection for Canada and Ontario." data-wikipedia-href="http://en.wikipedia.org/wiki/Lambert_conformal_conic_projection">Lambert Conformal Conic</option>
+          <option value="albers" data-description="The Albers map distorts the latitude axes to keep areas proportional. This is the standard projection for the United States, British Columbia and Yukon. Lengths are equivalent all over the map: unlike previous projections, you can show a scale on this one. But shapes distort at the edges." data-wikipedia-href="http://en.wikipedia.org/wiki/Albers_projection">Albers Equal-Area Conic</option>
+        </select>
+      </div>
+    </form>
+
+    <div id="result">
+      <div class="map"></div>
+      <p class="description"></p>
+      <a class="wikipedia-info" href="#">More details (on Wikipedia)</a>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

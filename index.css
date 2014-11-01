@@ -1,0 +1,82 @@
+path.province {
+    fill: #d4f1cc;
+    stroke: #658456;
+    stroke-width: 1px;
+}
+
+path.graticule {
+    fill: transparent;
+    stroke: #ddd;
+    stroke-width: .5px;
+}
+
+.point {
+    fill: #a44;
+    text-color: #a44;
+}
+
+text.point {
+    dominant-baseline: middle;
+}
+
+text.shadow {
+    stroke: white;
+    stroke-width: 2.5px;
+    opacity: .8;
+}
+
+text.point.ne {
+    text-anchor: end;
+}
+
+text.point.sw {
+    text-anchor: start;
+}
+
+html, body {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 40em;
+
+  font-family: sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+p {
+  font-family: serif;
+}
+
+#parameters {
+  display: block;
+  width: 100%;
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+#parameters label {
+  font-weight: bold;
+  padding: .25em .25em .25em 0;
+}
+
+#parameters .form-group {
+  display: inline-block;
+}
+
+select {
+  font: inherit;
+  padding: .25em 0 .25em .25em;
+}
+
+#result .map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 80% 0;
+}
+
+#result .map svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
