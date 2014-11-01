@@ -5,6 +5,11 @@ This simple page proves once and for all that your maps are wonky.
 
 Because _all_ maps are wonky.
 
+Live server
+-----------
+
+This code is running at http://canada-map-projections.adamhooper-projects.com.
+
 Serving
 -------
 
