@@ -41,16 +41,29 @@ html, body {
   font-family: sans-serif;
 }
 
+body {
+  padding: .75em;
+}
+
 * { box-sizing: border-box; }
+
+h1 {
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
 
 p {
   font-family: serif;
+  line-height: 1.5;
+  margin: 1.5em 0;
 }
 
 #parameters {
   display: block;
   width: 100%;
-  line-height: 2em;
+  line-height: 1.25;
   font-size: 1.2em;
 }
 
@@ -61,6 +74,7 @@ p {
 
 #parameters .form-group {
   display: inline-block;
+  margin-bottom: .5em;
 }
 
 select {
@@ -69,6 +83,7 @@ select {
 }
 
 #result .map {
+  margin-top: .75em;
   position: relative;
   width: 100%;
   height: 0;
@@ -79,4 +94,5 @@ select {
   position: absolute;
   top: 0;
   left: 0;
+  border: 2px solid black;
 }
